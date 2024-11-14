@@ -1,10 +1,13 @@
-var express = require('express');
-var app = express();
+const express = require("express");
+const app = express();
 
-app.use(express.json())
-/* GET home page. */
-app.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
 
-module.exports = app;
+app.use(express.json());
+
+var indexRouter = require("../routes/index");
+var aboutRouter = require("../routes/about");
+
+app.use("/", indexRouter);
+app.use("/about", aboutRouter);
+
+module.exports = app

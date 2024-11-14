@@ -1,0 +1,1 @@
+for vercel deploy and make the API workable have to use api folder and follow the index.js files code
